@@ -3,16 +3,24 @@ import pandas as pd
 
 data = get_historical_ohlc(
     exchange="NSE",
-    symboltoken="404",  # replace with real token
-    interval="FIVE_MINUTE",
-    from_date="2025-06-06 09:15",
+    symboltoken="2263",  # replace with real token
+    interval="ONE_HOUR",
+    from_date="2025-01-06 09:15",
     to_date="2025-06-06 15:30"
 )
 
 df = pd.DataFrame(data)
 
-#Rename columns directly
+# Rename columns directly
 df.columns = ['DateTime', 'Open', 'High', 'Low', 'Close', 'Volume']
+
+# Convert DateTime column to datetime dtype
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 
 print(df)
+
+# Save DataFrame to CSV file
+csv_file_path = 'Data/historical_data.csv'  # update path as needed
+df.to_csv(csv_file_path, index=False)
+
+print(f"Data saved to {csv_file_path}")
