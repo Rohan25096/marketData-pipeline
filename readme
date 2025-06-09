@@ -1,0 +1,11 @@
+This is a real-time market data processing for Indian stick market which fetches data in real time, 
+logs and analyzes high frequency data. It fetches data from APIs like Zerodha and AngelOne SmartAPI.
+For the time being it can fetch OHLC(Open, High, Low and 
+Close) data.
+It will have features like
+-Technical Indicators (EMA, SMA and RSI)
+-Option Chain visualizer (strike wise)
+-Open Intrest Buildup
+-Trend Channel Breakout detection
+These tools will be added gradually as the model focuses on bactesting capabilities, modularity, and
+real-time uses in live market conditions.
