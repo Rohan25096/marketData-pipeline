@@ -1,3 +1,13 @@
 import pandas as pd
+import mplfinance as mpl
 file_path = "C:/Users/rohan/OneDrive/Desktop/Finance_ALGO/ANGEL_BROKING/Data/historical_data.csv"
 df = pd.read_csv(file_path)
+
+df['DateTime'] = pd.to_datetime(df['DateTime'])
+df.set_index('DateTime', inplace=True)
+df.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+my_style = mpl.make_mpf_style(
+    base_mpf_style='yahoo',
+    facecolor='darkgrey',       # background of the chart
+)
+mpl.plot(df[-400:], type='candle', mav=(50, 75, 100), title='EMA crossover', volume=True, style=my_style)
