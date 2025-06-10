@@ -31,3 +31,24 @@ for i in range(window, len(df) - window):
     if df['Low'].iloc[i] == local_lows.min():
         df.iloc[i, df.columns.get_loc('pivot_lows')] = df['Low'].iloc[i] - 2
 
+# Filter only non-NaN pivot points
+pivot_plots = []
+if df['pivot_highs'].notna().any():
+    pivot_plots.append(
+        mpl.make_addplot(df['pivot_highs'], type='scatter', markersize=100, marker='^', color='green')
+    )
+if df['pivot_lows'].notna().any():
+    pivot_plots.append(
+        mpl.make_addplot(df['pivot_lows'], type='scatter', markersize=100, marker='v', color='red')
+    )
+
+#Plotting
+my_style = mpl.make_mpf_style(base_mpf_style='yahoo', facecolor='darkgrey')
+
+mpl.plot(df,
+         type='candle',
+         mav=(50, 75, 100),
+         title='EMA Crossover with Pivot Highs and Lows',
+         volume=True,
+         style=my_style,
+         addplot=pivot_plots)

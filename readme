@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 This is a real-time market data processing for Indian stock market which fetches data in real time, 
+=======
+This is a real-time market data processing for Indian stock market which fetches data in real time,
+>>>>>>> Stashed changes
 logs and analyzes high frequency data. It fetches data from APIs like Zerodha and AngelOne SmartAPI.
-For the time being it can fetch OHLC(Open, High, Low and 
+For the time being it can fetch OHLC(Open, High, Low and
 Close) data.
 It will have features like
 -Technical Indicators (EMA, SMA and RSI)
