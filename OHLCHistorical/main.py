@@ -3,10 +3,10 @@ import pandas as pd
 
 data = get_historical_ohlc(
     exchange="NSE",
-    symboltoken="2263",  # replace with real token
+    symboltoken="4503",  # replace with real token
     interval="ONE_HOUR",
     from_date="2025-01-06 09:15",
-    to_date="2025-06-06 15:30"
+    to_date="2025-06-12 15:30"
 )
 
 df = pd.DataFrame(data)
@@ -20,7 +20,7 @@ df['DateTime'] = pd.to_datetime(df['DateTime'])
 print(df)
 
 # Save DataFrame to CSV file
-csv_file_path = 'Data/historical_data.csv'  # update path as needed
+csv_file_path = 'Data/historical_data_MPHASIS.csv'  # update path as needed
 df.to_csv(csv_file_path, index=False)
 
 print(f"Data saved to {csv_file_path}")
