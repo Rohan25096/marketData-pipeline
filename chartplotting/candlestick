@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import mplfinance as mpl
 
-file_path = "C:/Users/rohan/OneDrive/Desktop/Finance_ALGO/ANGEL_BROKING/Data/historical_data_MPHASIS.csv"
+file_path = "C:/Users/rohan/OneDrive/Desktop/Finance_ALGO/ANGEL_BROKING/Data/historical_data_2263.csv"
 df = pd.read_csv(file_path)
 
 df['DateTime'] = pd.to_datetime(df['DateTime'])
