@@ -13,3 +13,22 @@ It will have features like
 -Trend Channel Breakout detection
 These tools will be added gradually as the model focuses on bactesting capabilities, modularity, and
 real-time uses in live market conditions.
+
+🔗 Supabase Integration Guide:
+    1. Create a Supabase Project
+        Go to https://supabase.com and log in or sign up.
+        Click on “New Project”.
+        Provide a project name, password, and database region.
+
+    2. Get Project URL and API Keys
+        Once the project is ready, go to Project Settings > API.
+        Copy the following values:
+        >Project URL (called “URL” under the "Project API")
+        >Anon Key (or Service Role Key, if you need elevated permissions)
+
+    3. Store Keys in .env File, like
+        SUPABASE_URL=https://your-project-name.supabase.co
+        SUPABASE_KEY=your-anon-or-service-key-here
+
+    4. Install pyhton dependencies
+        pip install supabase
