@@ -10,7 +10,7 @@ import time
 from datetime import datetime, timezone, timedelta
 
 # --- Load credentials ---
-load_dotenv(dotenv_path="C:/Users/rohan/OneDrive/Desktop/Finance_ALGO/Angel_broking/.gitignore/.env")
+load_dotenv(dotenv_path="Your path to the .env file")
 
 api_key     = os.getenv("API_KEY")
 CLIENT_CODE = os.getenv("CLIENT_CODE")
